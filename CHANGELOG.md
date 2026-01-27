@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.0.5
+
+### Patch Changes
+
+-   📦 NEW: changelog automation
+
 ## 0.0.4
 
 ### Patch Changes

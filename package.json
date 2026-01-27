@@ -1,6 +1,6 @@
 {
   "name": "shipsheet",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "CLI for managing a local tasks.json ship sheet - exportable to Kanban or Google Sheets",
   "type": "module",
   "main": "dist/index.js",
@@ -15,7 +15,7 @@
     "typecheck": "tsc --noEmit",
     "changeset": "changeset",
     "version": "changeset version",
-    "release": "pnpm build && changeset publish && git push --follow-tags && gh release create v$(node -p \"require('./package.json').version\") --generate-notes -n \"[Full Changelog](https://github.com/ahmadawais/shipsheet/blob/main/CHANGELOG.md)\""
+    "release": "pnpm build && changeset version && git add -A && git commit -m \"🚀 RELEASE: v$(node -p \"require('./package.json').version\")\" && changeset publish && git push --follow-tags && VERSION=$(node -p \"require('./package.json').version\") && gh release create v$VERSION --generate-notes && gh release edit v$VERSION --notes \"$(gh release view v$VERSION --json body -q .body)\n\n[Full Changelog](https://github.com/ahmadawais/shipsheet/blob/main/CHANGELOG.md)\""
   },
   "keywords": [
     "cli",
