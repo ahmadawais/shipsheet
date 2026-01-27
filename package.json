@@ -1,0 +1,35 @@
+{
+  "name": "shipsheet",
+  "version": "1.0.0",
+  "description": "CLI for managing a local tasks.json ship sheet - exportable to Kanban or Google Sheets",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "shipsheet": "dist/index.js",
+    "ss": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["cli", "tasks", "todo", "kanban", "shipsheet", "skills"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadawais/shipsheet.git"
+  },
+  "author": "Ahmad Awais",
+  "files": [
+    "dist",
+    "skill"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "commander": "^12.0.0"
+  }
+}

@@ -1,4 +1,5 @@
 # Cli
+- Always add a relevant .gitignore file when creating projects. Confidence: 0.85
 - Use pnpm as the package manager for CLI projects. Confidence: 1.00
 - Use TypeScript for CLI projects. Confidence: 0.95
 - Use tsup as the build tool for CLI projects. Confidence: 0.95
