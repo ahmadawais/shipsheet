@@ -51,7 +51,9 @@ STEPS=(
 #######################################
 
 log() {
-  local msg="[$(date '+%H:%M:%S')] $1"
+  local timestamp=$(date '+%H:%M:%S' 2>/dev/null || echo "")
+  local msg="$1"
+  [ -n "$timestamp" ] && msg="[$timestamp] $msg"
   echo -e "$msg"
   echo "$msg" >> "$LOG_FILE"
 }
@@ -123,12 +125,18 @@ get_current_branch() {
 }
 
 get_default_branch() {
-  # Try config, then common defaults
+  # Try config first
   if [ -f "$CONFIG_FILE" ]; then
     local branch=$(grep "^branch:" "$CONFIG_FILE" 2>/dev/null | cut -d: -f2 | tr -d ' ')
     [ -n "$branch" ] && echo "$branch" && return
   fi
-  git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@' || echo "main"
+  # Try git remote HEAD
+  local remote_branch=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@')
+  if [ -n "$remote_branch" ]; then
+    echo "$remote_branch"
+  else
+    echo "main"
+  fi
 }
 
 has_uncommitted_changes() {
