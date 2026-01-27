@@ -25,3 +25,10 @@
 - Prefer local release workflows over GitHub Actions CI/CD. Confidence: 0.75
 - Include GitHub Releases creation in the release workflow. Confidence: 0.70
 - Link to CHANGELOG.md in GitHub Release notes. Confidence: 0.65
+- Include a release commit with format "🚀 RELEASE: vX.X.X" before publishing. Confidence: 0.65
+- Show git commits since last release before running changeset prompts. Confidence: 0.65
+- Create universal/reusable scripts that work across projects rather than project-specific ones. Confidence: 0.60
+- Prefer non-interactive automation over interactive CLI prompts when possible. Confidence: 0.60
+- Consolidate related tasks into a single unified script rather than multiple separate scripts. Confidence: 0.60
+- Design release scripts with modular pure functions/steps that can fail safely and allow rollback. Confidence: 0.65
+- Make release scripts resumable and idempotent - allow running individual steps and skip already-completed steps on re-run. Confidence: 0.70

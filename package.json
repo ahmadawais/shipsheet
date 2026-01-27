@@ -13,9 +13,7 @@
     "dev": "tsc --watch",
     "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
-    "changeset": "changeset",
-    "version": "changeset version",
-    "release": "pnpm build && changeset version && git add -A && git commit -m \"🚀 RELEASE: v$(node -p \"require('./package.json').version\")\" && changeset publish && git push --follow-tags && VERSION=$(node -p \"require('./package.json').version\") && gh release create v$VERSION --generate-notes && gh release edit v$VERSION --notes \"$(gh release view v$VERSION --json body -q .body)\n\n[Full Changelog](https://github.com/ahmadawais/shipsheet/blob/main/CHANGELOG.md)\""
+    "release": "./scripts/release.sh"
   },
   "keywords": [
     "cli",
