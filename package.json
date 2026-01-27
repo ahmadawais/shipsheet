@@ -1,6 +1,6 @@
 {
   "name": "shipsheet",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "CLI for managing a local tasks.json ship sheet - exportable to Kanban or Google Sheets",
   "type": "module",
   "main": "dist/index.js",

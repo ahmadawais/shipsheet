@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.0.6
+
+### Patch Changes
+
+-   -   🐛 FIX: logs
+    -   🐛 FIX: log
+    -   🐛 FIX: release script
+    -   📦 NEW: release workflow
+    -   📦 NEW: release workflow
+    -   🐛 FIX: release script
+
 ## 0.0.5
 
 ### Patch Changes
