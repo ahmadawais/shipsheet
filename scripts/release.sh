@@ -140,7 +140,8 @@ get_default_branch() {
 }
 
 has_uncommitted_changes() {
-  [ -n "$(git status --porcelain 2>/dev/null)" ]
+  # Ignore release artifacts
+  [ -n "$(git status --porcelain 2>/dev/null | grep -v '\.release-')" ]
 }
 
 is_npm_logged_in() {
