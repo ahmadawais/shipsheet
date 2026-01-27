@@ -1,5 +1,0 @@
-[] \033[0;34mℹ️  Starting new release...\033[0m
-[] \033[0;34mℹ️  Running preflight checks...\033[0m
-[] \033[0;31m❌ Uncommitted changes detected. Commit or stash first.\033[0m
-[] \033[1;33m⚠️  Not on  branch (currently on main)\033[0m
-[] \033[0;31m❌ Preflight failed with 1 error(s)\033[0m
