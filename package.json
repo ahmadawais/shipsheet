@@ -1,27 +1,22 @@
 {
   "name": "shipsheet",
   "version": "0.0.6",
-  "description": "CLI for managing a local tasks.json ship sheet - exportable to Kanban or Google Sheets",
+  "description": "Thin proxy CLI that forwards all commands to shipeeet",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "index.js",
   "bin": {
-    "shipsheet": "dist/index.js",
-    "ss": "dist/index.js"
+    "shipsheet": "index.js",
+    "ss": "index.js"
   },
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "start": "node dist/index.js",
-    "typecheck": "tsc --noEmit",
-    "release": "./scripts/release.sh"
+    "start": "node index.js",
+    "proxy": "node index.js --help"
   },
   "keywords": [
     "cli",
-    "tasks",
-    "todo",
-    "kanban",
+    "proxy",
     "shipsheet",
-    "skills"
+    "shipeeet"
   ],
   "license": "MIT",
   "repository": {
@@ -30,16 +25,10 @@
   },
   "author": "Ahmad Awais",
   "files": [
-    "dist",
-    "skill"
+    "index.js",
+    "README.md"
   ],
-  "devDependencies": {
-    "@changesets/changelog-github": "^0.5.2",
-    "@changesets/cli": "^2.29.8",
-    "@types/node": "^20.10.0",
-    "typescript": "^5.3.0"
-  },
   "dependencies": {
-    "commander": "^12.0.0"
+    "shipeeet": "latest"
   }
 }
