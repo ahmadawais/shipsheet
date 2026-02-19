@@ -1,6 +1,6 @@
 {
   "name": "shipsheet",
-  "version": "0.0.6",
+  "version": "0.1.0",
   "description": "Thin proxy CLI that forwards all commands to shipeeet",
   "type": "module",
   "main": "index.js",
